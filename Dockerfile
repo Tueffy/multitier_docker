@@ -2,4 +2,4 @@
 FROM golang:onbuild
 
 # expose the port, so that we have access to it
-EXPOSE 5080
+EXPOSE 80
