@@ -1,0 +1,12 @@
+web:
+  image: tueffy/webgoredis
+  depends_on:
+  - redis
+lb:
+  image: dockercloud/haproxy
+  links:
+  - web
+  ports:
+  - 80:80
+redis:
+  image: redis
