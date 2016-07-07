@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     image: tueffy/webgoredis
-    depends_on:
+    links:
     - redis
   lb:
     image: dockercloud/haproxy
