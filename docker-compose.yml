@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: tueffy/webgoredis
+    image: <user>/webgoredis
     links:
     - redis
   lb:
