@@ -6,3 +6,7 @@ HA Proxy, Go Web Server, Redis KV store
 docker build -t <userid>/webgoredis .
 
 ##Replace userid correctly and then use same ID in docker-compose.yml file!
+
+
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/)
+
