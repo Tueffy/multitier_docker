@@ -98,7 +98,7 @@ docker service scale mymultitiertest_web=3
 ~~~
  
 
-Docker CLoud Tutorial
+Docker Cloud Tutorial
 ------------
 That is the most easy one! Ensure that you have an account in cloud.docker.com. Create a node cluster (e.g. also via Packet or AWS) and then just hit the button below:
 
