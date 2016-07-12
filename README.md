@@ -70,10 +70,37 @@ docker swarm join <managerip>:2377
 ~~~
 docker node ls
 ~~~
-4. 
+4. If you have not done already in previous tutorial, build the web image and adopt the docker-compose.yml file with the correct name
+5. In order to create a DAB (Distributed Application Bundle), get the images for redis and lb
+~~~
+docker-compose pull redis
+docker-compose pull lb
+~~~
+6. And now we create the bundle:
+~~~
+docker-compose bundle --fetch-digests
+~~~
+7. Via the new deploy command, the dab file can be deployed to the Swarm and you can give it a name
+~~~
+docker deploy -f multitierdocker.dab mymultitiertest
+~~~
+8. After that you can have a look at the created services
+~~~
+docker service ls
+~~~
+9. For detailed information on a service, you can look at the tasks (aka deployed containers)
+~~~
+docker service tasks mymultitiertest_web
+~~~
+10. And also here you can scale easily
+~~~
+docker service scale mymultitiertest_web=3
+~~~
+ 
 
 Docker CLoud Tutorial
 ------------
+That is the most easy one! Ensure that you have an account in cloud.docker.com. Create a node cluster (e.g. also via Packet or AWS) and then just hit the button below:
 
 [![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/)
 
