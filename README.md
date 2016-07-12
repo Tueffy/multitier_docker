@@ -8,18 +8,22 @@ This application stack is comprised out of three images
 Required Installation Process
 ------------
 1. Install Docker v1.12 experimental
-    # curl -sSL https://experimental.docker.com/ | sh
-
+~~~
+curl -sSL https://experimental.docker.com/ | sh
+~~~
 2. Install Docker Compose
-    # curl -L https://github.com/docker/compose/releases/download/1.8.0-rc2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-    chmod +x /usr/local/bin/docker-compose
-
+~~~
+curl -L https://github.com/docker/compose/releases/download/1.8.0-rc2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+~~~
 3. Start Docker Service
-    # sudo service docker start
-
+~~~
+sudo service docker start
+~~~
 4. Ensure that your user is in the Docker group!
-    # sudo usermod -aG docker your-user
-
+~~~
+sudo usermod -aG docker your-user
+~~~
 
 Docker Compose Tutorial
 ------------
